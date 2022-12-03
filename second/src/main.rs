@@ -10,7 +10,6 @@ enum YourPossibilites {
     Y,
     Z,
 }
-
 impl YourPossibilites {
     fn from_string(possibility: &str) -> YourPossibilites {
         if possibility == "X" {
@@ -23,6 +22,7 @@ impl YourPossibilites {
             panic!("Unknown possibility for your choice")
         }
     }
+    /// Needed to get first start, then it appeard that it's lose draw or win
     fn to_rps(&self)->RPS{
         match &self {
             YourPossibilites::X => RPS::Rock,
